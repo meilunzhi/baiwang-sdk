@@ -1,0 +1,30 @@
+{
+  "name": "nuecms/baiwang-sdk",
+  "description": "Baiwang invoice SDK for PHP 7.4",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Melon\\Baiwang\\": "php/src/"
+    },
+    "files": [
+      "php/src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Melon\\Baiwang\\Tests\\": "php/tests/"
+    }
+  },
+  "scripts": {
+    "test": "php php/tests/run.php",
+    "lint": "php php/tests/lint.php"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

@@ -13,7 +13,7 @@ PHP 7.4 compatible SDK for Baiwang OpenAPI invoice services. The PHP implementat
 Install from a published package:
 
 ```bash
-composer require nuecms/baiwang-sdk
+composer require Melon/baiwang-sdk
 ```
 
 For this repository, generate the local autoloader first:
@@ -83,19 +83,20 @@ $baiwang = Melon\Baiwang\createInvoice($config);
 
 ## API methods
 
-| PHP method | Baiwang method |
-| --- | --- |
-| `getToken()` | `baiwang.oauth.token` |
-| `refreshToken()` | `baiwang.oauth.token` |
-| `authenticate()` | Reads cache or obtains a token |
-| `invoicing($params)` | `baiwang.output.invoice.issue` |
-| `queryInvoice($params)` | `baiwang.output.invoice.query` |
-| `queryLayout($params)` | `baiwang.output.format.query` |
-| `queryCloudHeadUp($params)` | `baiwang.bizinfo.companySearch` |
-| `preInvoice($params)` | `baiwang.output.preinvoice.issue` |
-| `voidInvoiced($params)` | `baiwang.output.invoice.cancel` |
-| `issueRedLetter($params)` | `baiwang.output.redinvoice.issued` |
-| `request($method, $params)` | Any supported OpenAPI method |
+
+| PHP method                  | Baiwang method                     |
+| --------------------------- | ---------------------------------- |
+| `getToken()`                | `baiwang.oauth.token`              |
+| `refreshToken()`            | `baiwang.oauth.token`              |
+| `authenticate()`            | Reads cache or obtains a token     |
+| `invoicing($params)`        | `baiwang.output.invoice.issue`     |
+| `queryInvoice($params)`     | `baiwang.output.invoice.query`     |
+| `queryLayout($params)`      | `baiwang.output.format.query`      |
+| `queryCloudHeadUp($params)` | `baiwang.bizinfo.companySearch`    |
+| `preInvoice($params)`       | `baiwang.output.preinvoice.issue`  |
+| `voidInvoiced($params)`     | `baiwang.output.invoice.cancel`    |
+| `issueRedLetter($params)`   | `baiwang.output.redinvoice.issued` |
+| `request($method, $params)` | Any supported OpenAPI method       |
 
 All business methods take an associative PHP array. Use `taxNo` or `taxId` to populate `orgId`; a configured `orgId` takes precedence. Successful API envelopes return their `data` value directly. API errors throw `Melon\Baiwang\Exception\ApiException`, whose `getResponse()` method returns the unmodified API response.
 

@@ -1,6 +1,6 @@
 {
-  "name": "Melon/baiwang-sdk",
-  "description": "Baiwang invoice SDK for PHP 7.4",
+  "name": "melon/baiwang-sdk",
+  "description": "BaiWang Invoice SDK for PHP 7.4",
   "type": "library",
   "license": "MIT",
   "require": {
